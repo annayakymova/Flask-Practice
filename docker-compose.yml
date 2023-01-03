@@ -5,7 +5,7 @@ services:
         build:
           dockerfile: ./docker/python/Dockerfile
           context: ./
-        container_name: "flask3-web"
+        container_name: "flask4-web"
         ports:
             - "5000:5000"
         volumes:
@@ -17,7 +17,7 @@ services:
 
     database:
       image: mysql:8.0
-      container_name: "flask3"
+      container_name: "flask4"
       environment:
         MYSQL_ROOT_PASSWORD: "root"
         MYSQL_DATABASE: "flask"
@@ -34,4 +34,3 @@ services:
 networks:
   app:
     driver: bridge
-
